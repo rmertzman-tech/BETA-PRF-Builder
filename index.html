@@ -1,45 +1,512 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UCP Ethical Simulation</title>
-  <link rel="stylesheet" href="/static/style.css">
-</head>
-<body>
-  <h1>UCP v2.0 Ethical Simulation</h1>
-  <section>
-    <label for="roleSelect">Role:</label>
-    <select id="roleSelect">
-      <option value="Instructor">Instructor</option>
-      <option value="Researcher">Researcher</option>
-      <option value="Practitioner">Practitioner</option>
-    </select>
-    <button id="loadPresetBtn">Load Preset</button>
-  </section>
-  <section>
-    <label for="moduleSelect">Select Module:</label>
-    <select id="moduleSelect">
-      <option value="Ethical Dilemma: Trolley Problem">Trolley Problem</option>
-      <option value="Whistleblower Simulation">Whistleblower</option>
-      <option value="Paradigm Shift and PRF Drift">PRF Shift</option>
-    </select>
-    <p id="moduleDescription"></p>
-  </section>
-  <section>
-    <h2>Agent Setup</h2>
-    <textarea id="agentInput" rows="8" cols="60">
-[
-  {"name": "Ada", "identity_kernel": "integrity", "ita_role": "engineer", "prf": "consequentialist"},
-  {"name": "Turing", "identity_kernel": "logic", "ita_role": "scientist", "prf": "deontologist"}
-]
-    </textarea><br>
-    <button id="simulateBtn">Run Simulation</button>
-  </section>
-  <section>
-    <h2>Simulation Results</h2>
-    <pre id="output"></pre>
-  </section>
-  <script src="/static/app.js"></script>
-</body>
-</html>
+# Cognitive Interview Protocol for PRF-22 Scenario Validation
+
+**Purpose:** Ensure PRF-22 scenarios are interpreted as intended and response processes are clear  
+**Method:** Think-aloud + retrospective probing following CDC/NCHS guidelines  
+**Target:** 2 rounds, 5-10 participants per round, iterate until saturation
+
+---
+
+## Overview of Cognitive Interviewing for PRF-22
+
+### Why Cognitive Interviewing?
+
+**The problem we're solving:**
+- We adapted validated abstract items (MFQ, EPQ, etc.) into concrete scenarios
+- We shifted contexts from classroom → general life
+- We created novel ATCF items without prior validation
+- **Risk:** Scenarios may be interpreted differently than intended
+
+**What cognitive interviewing detects:**
+1. **Comprehension problems:** Do participants understand the scenario as we intended?
+2. **Response process issues:** How do they arrive at their answer? Does it match the construct?
+3. **Ambiguity:** Are scenarios open to multiple interpretations?
+4. **Cultural sensitivity:** Do scenarios work across diverse participants?
+5. **Affective reactions:** Do scenarios cause unexpected distress?
+
+**Evidence base:**
+- Willis (2004) - CDC cognitive interviewing methodology
+- Beatty & Willis (2007) - Practice of cognitive interviewing
+- Tourangeau et al. (2000) - Psychology of survey response
+- Primarily used in health surveys but validated for attitude/values measurement
+
+---
+
+## Participant Selection for Cognitive Interviews
+
+### Round 1 (n=5-7)
+
+**Recruitment criteria:**
+- Adult students (18+) from SPC or similar community college
+- Diverse demographics (age, gender, ethnicity, major)
+- NOT pilot study participants (to avoid contamination)
+- Willing to "think aloud" (brief practice provided)
+
+**Purposive sampling targets:**
+- 2 STEM majors (test technical scenario clarity)
+- 2 humanities/social science majors (test value-laden content)
+- 1 non-traditional student (age 30+, working adult - test life context applicability)
+- Mix of racial/ethnic backgrounds
+- Mix of religious/secular orientations (for Items 17-18)
+
+**Compensation:** $20 gift card for 60-minute session
+
+---
+
+### Round 2 (n=5-10)
+
+**After Round 1 revisions:**
+- Recruit new participants (same criteria)
+- Focus on items revised after Round 1
+- **Stop criterion:** When no new interpretation problems emerge (saturation)
+
+**If major issues persist:** Consider Round 3 with additional revisions
+
+---
+
+## Interview Protocol Structure
+
+### Session Flow (60 minutes total)
+
+**1. Introduction & Consent (5 min)**
+**2. Think-Aloud Practice (5 min)**
+**3. Item Testing - Phase A: Concurrent Think-Aloud (25 min)**
+**4. Item Testing - Phase B: Retrospective Probing (20 min)**
+**5. Debrief & General Feedback (5 min)**
+
+---
+
+## Script: Introduction & Consent (5 minutes)
+
+**Interviewer reads:**
+
+> "Thank you for helping us improve this questionnaire. We're developing a tool to understand how people think about ethical dilemmas. Today I'll ask you to complete some survey items while thinking aloud—basically, telling me what's going through your mind as you read and answer each question.
+>
+> **This is not a test.** There are no right or wrong answers. We're testing the questions, not you. Your honest reactions—including confusion, frustration, or difficulty—are exactly what we need to hear.
+>
+> **The session will take about 60 minutes.** I'll ask you to think aloud while answering items, then I'll ask follow-up questions about specific items. With your permission, I'll audio-record this session so I can review it later. The recording will be destroyed after we finalize the questionnaire. Everything you say is confidential.
+>
+> Do you have any questions before we begin?"
+
+**Obtain written consent** (or recorded verbal consent if remote)
+
+**Consent form includes:**
+- Purpose: Testing questionnaire clarity
+- Audio recording permission
+- Confidentiality (no names in transcripts)
+- Right to skip items or stop anytime
+- $20 compensation provided regardless
+
+---
+
+## Think-Aloud Training (5 minutes)
+
+**Interviewer explains:**
+
+> "I'm going to ask you to 'think aloud' as you work through the items. This means saying out loud everything you're thinking as you read the scenario and choose your answer. For example, you might say things like:
+>
+> - 'Okay, so this person is...'
+> - 'Hmm, I'm not sure what they mean by...'
+> - 'I think I'd choose 4 because...'
+> - 'This seems like...'
+>
+> Just say whatever comes to mind. Don't worry about being articulate or organized—I want to hear your raw thinking process."
+
+**Practice item (not part of PRF-22):**
+
+> **Practice Scenario:** You're at a restaurant and notice the server accidentally gave you $10 too much change.
+>
+> **Question:** "You should return the extra change to the server."
+>
+> 1 (Strongly Disagree) - 5 (Strongly Agree)
+
+**Participant thinks aloud while answering.**
+
+**Interviewer feedback:**
+- If silent: "Remember to keep talking—tell me what you're thinking"
+- If doing well: "Great! That's exactly what I need. Now let's try the real items."
+
+---
+
+## Phase A: Concurrent Think-Aloud (25 minutes)
+
+### Method: Participants think aloud while answering items
+
+**Interviewer provides:**
+- Printed or digital version of PRF-22 (Items 1-22)
+- Response scale visible
+
+**Instructions:**
+
+> "I'll show you the questionnaire items one at a time. Please read each scenario aloud, then think aloud as you decide how to answer. Take your time—I want to hear your thinking process.
+>
+> If you get stuck or confused, that's valuable information for us. Just tell me what's confusing."
+
+---
+
+### Interviewer Observation Checklist (Note-taking during concurrent phase)
+
+**For each item, note:**
+
+| Observation | What to Record |
+|-------------|----------------|
+| **Comprehension** | Did they understand scenario as intended? |
+| **Pauses/hesitation** | Where did they pause? What caused uncertainty? |
+| **Spontaneous comments** | "This is confusing" / "I'm not sure what this means" |
+| **Unexpected interpretations** | Did they read scenario differently than we intended? |
+| **Affective reactions** | Signs of discomfort, distress, defensiveness |
+| **Response process** | What reasoning led to their answer? |
+
+---
+
+### Interviewer Minimal Prompts (If participant goes silent)
+
+**Neutral prompts to restart thinking aloud:**
+- "What are you thinking right now?"
+- "Can you tell me more about that?"
+- "What's going through your mind?"
+
+**AVOID leading prompts:**
+- ❌ "Does that scenario make sense to you?" (suggests it might not)
+- ❌ "Do you understand what we're asking?" (implies they should)
+- ✅ "Tell me what you're thinking about this scenario"
+
+---
+
+### Critical Items to Watch (Likely problem areas)
+
+**Items 20-22 (ATCF - novel constructs):**
+- Are participants interpreting "constraint" as we intend?
+- Do they understand the thermodynamic framing?
+- Is "responsibility attribution" clear in Item 22?
+
+**Item 5 (Purity/Sanctity):**
+- Does "disgusting" trigger strong affective reactions?
+- Do participants interpret this as moral vs. aesthetic judgment?
+
+**Item 18 (Religion in public decisions):**
+- Does this trigger defensive reactions?
+- Are secular participants interpreting this as we intend?
+
+**Item 19 (Homosexuality acceptance):**
+- Potential sensitivity - watch for discomfort
+- Are participants interpreting "accept" vs. "approve"?
+
+---
+
+## Phase B: Retrospective Probing (20 minutes)
+
+### Method: Follow-up questions about specific items after completion
+
+**Interviewer selects 8-10 items for probing based on:**
+1. Items where participant showed hesitation (from notes)
+2. Novel ATCF items (20-22) - always probe these
+3. Items with complex scenarios (15, 16)
+4. Items with sensitive content (18, 19)
+
+---
+
+### Standard Probe Questions (Asked for selected items)
+
+**Comprehension probes:**
+
+1. **Paraphrase probe:** "Can you tell me in your own words what this scenario is about?"
+   - **What this reveals:** Whether they understood the setup correctly
+
+2. **Definition probe:** "What does [key term] mean to you in this context?"
+   - Example: For Item 5, ask "What does 'disgusting' mean to you here?"
+   - **What this reveals:** Whether terms are interpreted as intended
+
+**Response process probes:**
+
+3. **Think-aloud probe:** "You said [X] while reading this. Can you tell me more about what you meant?"
+   - **What this reveals:** Clarifies spontaneous comments from concurrent phase
+
+4. **Reasoning probe:** "How did you arrive at your answer for this item?"
+   - **What this reveals:** Whether reasoning matches the construct we're measuring
+
+5. **Difficulty probe:** "Was anything about this scenario confusing or hard to answer?"
+   - **What this reveals:** Problems we didn't observe during concurrent phase
+
+**Interpretation probes:**
+
+6. **Alternative interpretation probe:** "Could someone understand this scenario differently than you did?"
+   - **What this reveals:** Awareness of ambiguity
+
+7. **Context probe:** "Does this scenario feel realistic to you? Have you experienced something like this?"
+   - **What this reveals:** Ecological validity, applicability
+
+---
+
+### Specific Probes for ATCF Items (Always Ask)
+
+**Item 20 (Poverty/T-prime constraint):**
+
+> **Paraphrase:** "Tell me what's happening in this scenario."
+> 
+> **Constraint understanding:** "When you answered, were you thinking about whether this person really has a choice? Why or why not?"
+> 
+> **Expected interpretation:** Participant should recognize severe financial constraint limits real agency
+> 
+> **Problem sign:** If they say "Everyone has a choice" without acknowledging constraint → Scenario needs revision
+
+---
+
+**Item 21 (Sleep deprivation/ATCF depletion):**
+
+> **Paraphrase:** "What do you think this scenario is asking about?"
+> 
+> **Responsibility understanding:** "You answered [X]. Are you saying the sleep-deprived student is [more/less/equally] responsible? Why?"
+> 
+> **Expected interpretation:** Participant should consider how depletion affects culpability
+> 
+> **Problem sign:** If they don't connect sleep to responsibility → Need clearer causal link
+
+---
+
+**Item 22 (Engineer/Institutional capture):**
+
+> **Multiple-choice clarity:** "You chose [option]. Can you explain why that option fit best?"
+> 
+> **Responsibility distribution:** "Some people put all blame on the engineer, some on management, some on the system. What makes you lean toward [their choice]?"
+> 
+> **Expected interpretation:** Participant should see this as complex responsibility distribution
+> 
+> **Problem sign:** If they say "Obviously it's the engineer's fault" with no nuance → Scenario may prime individual attribution too strongly
+
+---
+
+### Specific Probes for Potentially Sensitive Items
+
+**Item 18 (Religion in public decisions):**
+
+> **Neutrality check:** "This question asks about religion in public decisions. Did you feel comfortable answering this?"
+> 
+> **Interpretation check:** "What did you think we were trying to learn with this question?"
+> 
+> **Problem sign:** Defensiveness ("Are you trying to say religious people are wrong?") → May need reframing
+
+---
+
+**Item 19 (Homosexuality acceptance):**
+
+> **Sensitivity check:** "Some people find this topic sensitive. Did you feel comfortable with how this scenario was presented?"
+> 
+> **Accept vs. approve distinction:** "When you read 'accept,' what did that mean to you? Is it the same as 'approve'?"
+> 
+> **Problem sign:** Confusion between accept/approve → Need clearer wording
+
+---
+
+## Debrief & General Feedback (5 minutes)
+
+**Interviewer asks:**
+
+1. **Overall clarity:** "Overall, were the scenarios clear and understandable?"
+
+2. **Length/burden:** "Was the questionnaire too long, too short, or about right?"
+
+3. **Relevance:** "Did the scenarios feel relevant to real-life situations you might face?"
+
+4. **Emotional impact:** "Were any scenarios upsetting or offensive? Which ones?"
+
+5. **Open feedback:** "Is there anything else you'd like to tell me about the questionnaire?"
+
+**Interviewer provides:**
+- Thank them for valuable feedback
+- Explain how their input will improve the questionnaire
+- Provide $20 gift card
+- Remind about confidentiality
+
+---
+
+## Analysis & Revision Process
+
+### After Round 1: Categorize Problems
+
+**For each item, document:**
+
+| Problem Type | Frequency | Severity | Action Needed |
+|--------------|-----------|----------|---------------|
+| **Comprehension error** | How many participants misunderstood? | Minor/Major | Revise wording |
+| **Unexpected interpretation** | How many read differently? | Minor/Major | Add clarification or redesign |
+| **Affective reaction** | How many showed discomfort? | Minor/Major | Consider sensitivity warning or remove |
+| **Ambiguity** | How many saw multiple meanings? | Minor/Major | Make scenario more specific |
+| **Construct mismatch** | How many reasoned differently than construct predicts? | Minor/Major | Redesign scenario |
+
+---
+
+### Revision Decision Rules
+
+**Minor revision (wording adjustment):**
+- 1-2 participants had issue
+- Simple fix available
+- Doesn't change construct
+
+**Example:**
+- **Problem:** 2 participants confused "obedience" with "blind obedience" in Item 17
+- **Fix:** Change to "respect for authority and following rules"
+
+---
+
+**Major revision (scenario redesign):**
+- 3+ participants had issue
+- Fundamental comprehension problem
+- Construct not being measured as intended
+
+**Example:**
+- **Problem:** 4 participants interpreted Item 20 as "laziness" rather than "financial constraint"
+- **Fix:** Strengthen scenario to make constraint more obvious: "...hasn't eaten today, electric shut off, kids need shoes..."
+
+---
+
+**Remove item:**
+- Universal confusion (5+ participants)
+- No fix available that maintains construct
+- Severe emotional reactions
+
+**Example (hypothetical):**
+- If Item 19 causes universal discomfort/defensiveness → Consider removing
+- **Alternative:** Replace with less direct tolerance measure
+
+---
+
+### Round 1 → Round 2 Process
+
+**Steps:**
+1. **Transcribe interviews** (or detailed notes if not recording)
+2. **Code problems** by item and type
+3. **Team meeting** to discuss revisions
+4. **Implement revisions**
+5. **Round 2 testing** with new participants
+6. **If Round 2 clean:** Proceed to pilot
+7. **If Round 2 has issues:** Consider Round 3 or remove problematic items
+
+---
+
+## Documentation for IRB & Publication
+
+### Required Documentation:
+
+**1. Cognitive Interview Report (brief):**
+
+> "We conducted 2 rounds of cognitive interviews (n=5 Round 1, n=7 Round 2) following CDC methodology (Willis, 2004). Round 1 identified comprehension issues in Items 17, 20, and 22. We revised these items and retested in Round 2. No major issues emerged in Round 2, indicating scenarios are interpreted as intended."
+
+**2. Sample Revision Log:**
+
+| Item | Issue Identified | Round | Revision | Validation |
+|------|------------------|-------|----------|------------|
+| 17 | "Obedience" interpreted as "blind obedience" | 1 | Changed to "respect for authority" | Round 2: No issues |
+| 20 | Poverty framing too subtle | 1 | Strengthened constraint indicators | Round 2: Clear interpretation |
+| 22 | Engineer choice too salient | 1 | Balanced response options | Round 2: Distribution improved |
+
+**3. For Methods Section of Paper:**
+
+> "Prior to pilot testing, we conducted cognitive interviews (Willis, 2004) with 12 participants across 2 rounds (n=5 Round 1, n=7 Round 2). Concurrent think-aloud and retrospective probing identified comprehension issues in 3 items, which we revised and validated in Round 2. Final scenarios showed consistent interpretation across diverse participants (see Supplementary Materials for revision log)."
+
+---
+
+## Materials Needed for Cognitive Interviews
+
+### Interviewer Materials:
+- ✅ Consent form (2 copies - participant keeps one)
+- ✅ PRF-22 questionnaire (printed or digital)
+- ✅ Interview protocol script (this document)
+- ✅ Observation checklist (blank template)
+- ✅ Audio recorder + backup
+- ✅ Gift cards ($20 × number of participants)
+- ✅ Practice item (for think-aloud training)
+
+### Participant Materials:
+- ✅ Copy of consent form (to keep)
+- ✅ PRF-22 questionnaire
+- ✅ Pen/pencil (if paper version)
+- ✅ Water (60-minute session)
+
+---
+
+## Timeline for Cognitive Interviewing
+
+**Week 1:**
+- Monday-Tuesday: Recruit Round 1 participants (n=5)
+- Wednesday-Friday: Conduct Round 1 interviews (1 hour each)
+
+**Week 2:**
+- Monday: Transcribe/analyze Round 1
+- Tuesday: Team meeting - decide revisions
+- Wednesday: Implement revisions
+- Thursday-Friday: Recruit Round 2 participants (n=7)
+
+**Week 3:**
+- Monday-Thursday: Conduct Round 2 interviews
+- Friday: Analyze Round 2
+
+**Week 4:**
+- Monday: Final revisions (if needed)
+- Tuesday: Prepare final PRF-22 for pilot
+- Wednesday: IRB protocol updated with cognitive interview results
+- **Ready for pilot study!**
+
+---
+
+## Key References for Cognitive Interviewing
+
+**Methodology:**
+- Willis, G. B. (2004). *Cognitive interviewing: A tool for improving questionnaire design.* Sage Publications.
+- Beatty, P. C., & Willis, G. B. (2007). Research synthesis: The practice of cognitive interviewing. *Public Opinion Quarterly, 71*(2), 287-311.
+- Tourangeau, R., Rips, L. J., & Rasinski, K. (2000). *The psychology of survey response.* Cambridge University Press.
+
+**Applications to Values/Attitudes:**
+- Presser, S., et al. (2004). Methods for testing and evaluating survey questionnaires. Wiley.
+- Miller, K., et al. (2014). Cognitive interviewing methodology. Wiley.
+
+**Standards:**
+- CDC/NCHS Cognitive Interviewing Training Materials
+- International Test Commission Guidelines on Test Adaptation
+
+---
+
+## Success Criteria
+
+**Cognitive interviewing is successful when:**
+
+✅ **Comprehension:** 90%+ of participants interpret scenarios as intended  
+✅ **Clarity:** Participants can paraphrase scenarios correctly  
+✅ **Response process:** Reasoning matches the construct being measured  
+✅ **Consistency:** Similar interpretations across diverse participants  
+✅ **Sensitivity:** No unexpected distress or offense  
+✅ **Saturation:** Round 2 produces no new interpretation problems  
+
+**When these criteria are met → Proceed to pilot study with confidence that items are well-understood!**
+
+---
+
+## Quick Reference: Probing Question Templates
+
+**Copy these into your interview notes for easy reference:**
+
+**Comprehension:**
+- "Tell me in your own words what this scenario is about."
+- "What does [term] mean to you here?"
+
+**Response Process:**
+- "How did you decide on your answer?"
+- "What were you thinking about as you read this?"
+- "You paused here - what were you considering?"
+
+**Interpretation:**
+- "Could this scenario mean something different to someone else?"
+- "Does this feel realistic to you?"
+- "Have you experienced something like this?"
+
+**Sensitivity:**
+- "How did you feel reading this scenario?"
+- "Was anything about this uncomfortable?"
+
+**Difficulty:**
+- "Was anything confusing about this?"
+- "What made this hard (or easy) to answer?"
+
+**ATCF-Specific:**
+- "Did you consider whether this person really had a choice?"
+- "How much responsibility should they have given the situation?"
+- "Who's most to blame here - the person, leadership, or the system?"
